@@ -2,21 +2,13 @@
 
 <div class="container">
   <form>
-    <input type="text" name="task" />
-    <button>Add</button>
+    <input type="text" name="task" [(ngModel)]="task" />
+    <button (click)="addTask()">Add</button>
   </form>
 
   <ul>
-    <li>
-      <span>Task 1</span>
-      <button>Remove</button>
-    </li>
-    <li>
-      <span>Task 2</span>
-      <button>Remove</button>
-    </li>
-    <li>
-      <span>Task 3</span>
+    <li *ngFor="let item of todos">
+      <span>{{ item }}</span>
       <button>Remove</button>
     </li>
   </ul>
