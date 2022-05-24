@@ -1,3 +1,9 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 form {
   margin-top: 30px;
   display: flex;
@@ -22,9 +28,15 @@ ul {
     border: 1px solid #eee;
     display: flex;
     justify-content: space-between;
+    button{
+      margin-left: 15px;
+    }
     &:hover {
       background-color: #ff5964;
       color: white;
+      button {
+        color: white;
+      }
     }
   }
 }
